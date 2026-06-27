@@ -1,0 +1,125 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+
+ p, a{
+  font-size: 13px;
+ }
+
+ .top{
+  margin: 33px;
+ }
+
+ .top-p1,.top-p2{
+  margin: 33px 33px 0;
+ }
+
+ .top-start{
+  display: inline-block;
+  padding: 33px;
+ }
+
+ .index-title{
+  margin: 33px 33px 0;
+  padding: 17.42px 0;
+ }
+
+ .index-table{
+  width: 100%;
+  max-width: 745px;
+  margin: 0 33px;
+  margin-right: auto;
+ }
+
+.index-table-head-title{
+  text-align: center;
+}
+
+.index-table-head-body{
+  text-align: center;
+}
+
+.index-table-row{
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+ .index-table-head-title,.index-table-title{
+  padding: 1px 5px 7px;
+  width: 20%;
+  margin: 0;
+ }
+
+ .index-table-head-body,.index-table-body{
+  padding: 1px 5px 7px;
+  width: 50%;
+  margin: 0;
+ }
+
+ .index-table-item{
+  display: flex;
+  width: 30%;
+ }
+
+ .index-table-item-show, .index-table-item-edit, .index-table-item-destroy{
+  padding: 1px 5px 7px;
+  width: auto;
+ }
+
+ .index-new{
+  margin-left: 33px;
+ }
+
+ .New-book{
+  margin: 16px 0;
+ }
+
+ .field{
+  margin: 0 0 10px;
+ }
+
+ .show, .edit{
+  margin: 33px;
+ }
+
+ .flash{
+  color: green;
+  margin: 33px;
+ }
+
+.show-title{
+  margin-top: 33px;
+  padding-left: 33px;
+ }
+
+ .show-body{
+  margin: 33px 0;
+  padding-left: 33px;
+ }
+
+ .show-item, .edit-item{
+  display: flex;
+ }
+
+ .edit-item{
+  margin-top: 10px;
+ }

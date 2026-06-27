@@ -1,0 +1,65 @@
+<table class="index">
+
+<p class="flash"><%= flash[:notice] %></p>
+<h1 class="index-title">Books</h1>
+
+ <div class ="index-table">
+ <div class="index-table-row">
+  <p class="index-table-head-title"><strong>Title</strong></p>
+  <p class="index-table-head-body"><strong>Body</strong></p>
+  <p class="index-table-item"></p>
+  </div>
+
+ <% @books.each do |book| %>
+  <div class="index-table-row">
+  <p class="index-table-title">
+  <%= book.title %></p>
+  <p class="index-table-body">
+  <%= book.body %></p>
+
+  <div class="index-table-item">
+  <div class="index-table-item-show">
+  <%= link_to 'Show', show_books_path(book.id) %>
+  </div>
+  <div class="index-table-item-edit">
+  <%= link_to 'Edit', edit_books_path(book.id) %>
+  </div>
+  <div class="index-table-item-destroy">
+  <%= link_to 'Destroy', destroy_books_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %>
+  </div>
+  </div>
+  </div>
+ <% end %>
+ </div>
+ </table>
+
+ <div class="index-new">
+ <h2 class="New-book">New book</h2>
+
+ <% if @book.errors.any? %>
+  <%= @book.errors.count %> error prohibited this book from being saved:
+  <ul>
+  <% @book.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+  </ul>
+<% end %>
+
+ <%= form_with model:@book, url: '/books',  method: :post, local:true do |f| %>
+  <div class="field">
+  <p>Title</p>
+  <div class="field-title">
+  <%= f.text_field :title, style: "padding: 1px 2px;" %>
+  </div>
+  </div>
+  <div class="field">
+  <p>Body</p>
+  <div class="field-body">
+  <%= f.text_area :body, style: "padding: 2px;" %>
+  </div>
+  </div>
+  <div class="create">
+  <%= f.submit 'Create Book', style: "padding: 1px 6px;" %>
+  </div>
+<% end %>
+ </div>
